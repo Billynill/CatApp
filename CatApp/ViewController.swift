@@ -9,25 +9,23 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    // Связь с Activity Indicator View
+    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Настройка Activity Indicator
-        activityIndicator.hidesWhenStopped = true // Индикатор скрывается, когда останавливается
+        activityIndicator.hidesWhenStopped = true
     }
     
-    // Функция запуска индикатора загрузки
+    
     func startLoading() {
         activityIndicator.startAnimating()
-        view.isUserInteractionEnabled = false // Блокируем взаимодействие с экраном
-    }
+        view.isUserInteractionEnabled = false     }
     
-    // Функция остановки индикатора загрузки
+    
     func stopLoading() {
         activityIndicator.stopAnimating()
-        view.isUserInteractionEnabled = true // Разрешаем взаимодействие с экраном
+        view.isUserInteractionEnabled = true
     }
 }
